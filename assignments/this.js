@@ -14,7 +14,7 @@
 // code example for Window Binding
     //no age for sayAge to call for, this.age points to nothing
 function sayAge () {
-    console.log(`My age is ${this.age}`)
+    console.log(`My age is ${this}`)
   }
   
   const winUser = {
@@ -78,7 +78,7 @@ function newUser(name, age, location) { //can build a User that can be changed w
 // Principle 4
 
 // code example for Explicit Binding
-function sayAge () { //using the .call we can tell the function to use a variable that we can have outside the function
+function sayAgeAgain () { //using the .call we can tell the function to use a variable that we can have outside the function
     console.log(`My age is ${this.age}`)
   }
   
@@ -87,4 +87,4 @@ function sayAge () { //using the .call we can tell the function to use a variabl
     age: 24
   }
   
-  sayAge.call(exUser)
+  sayAgeAgain.call(exUser)
